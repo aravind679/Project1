@@ -1,0 +1,48 @@
+{%extends 'base.html'%}
+{% block body %}
+
+
+        <div class="container">
+            <table class="table table-hover" id="customers">
+                <thead>
+                  <tr>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Item Sold</th>
+                    <th scope="col">Quantity Sold</th>
+                    <th scope="col">Created</th>
+                  </tr>
+                </thead>
+                <br>
+                {%for d in my%}
+                <tbody>
+                  <tr>
+                      
+                    <th scope="row"><a href="/data/{{d.id}}/{{d.userid}}">{{d.amt}}</a></th>
+                    <th>{{d.item}}</th>
+                    <th>{{d.quantity}}</th>
+                    <th>{{d.created}}</th>
+                  </tr>
+                </tbody>
+                {%endfor%}
+              </table>
+          
+	<button type="button" onclick="makepdf()" style="float:right;" >download</button>
+<script>
+function makepdf(){
+ var printMe=document.getElementById('customers');
+ var wme=window.open("","","width:700,height:900");
+ wme.document.write(printMe.outerHTML);
+ wme.document.close();
+ wme.focus();
+ wme.print();
+ wme.close();
+}
+</script>
+        
+            
+           
+            
+
+        </div>
+{% endblock %}
+

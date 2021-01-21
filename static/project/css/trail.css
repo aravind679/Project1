@@ -1,0 +1,45 @@
+.para{
+    text-align: center;
+    text-decoration: solid;
+    font-family: Arial;
+    font-size: 25px;
+    margin-right: 35px;
+}
+.homepage{
+    margin-top: 40px;
+    text-align: center;
+    text-decoration: solid;
+    font-family:Arial;
+}
+#h1{
+    font-size: 60px;
+}
+#buttons{
+    display: flex;
+    justify-content:center;
+    margin-top: 100px;   
+}
+#signup{
+    margin-left:40px;
+}
+.container{
+    text-align: center;
+}
+.data{
+    display: flex;
+    max-width: 30%;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-left: 70px;   
+}
+.edel{
+    margin-top: 25px;
+    margin-right: 100px;
+}
+#p5{
+    margin-right: 55px;
+}
+.p7{
+    margin-top: 120px;
+}

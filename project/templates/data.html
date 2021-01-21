@@ -1,0 +1,34 @@
+{%extends 'base.html'%}
+{% block body %}
+
+        <div class="container">
+            <div class="data">
+                <h3> Item:</h3>
+                <br>
+                <h4>{{choice.item}}</h4>              
+            </div>
+            <div class="data">    
+                <h3>Quantity:</h3>
+                <br>
+                <h4>{{choice.quantity}}</h4>
+            </div>
+            <div class="data"> 
+                <h3>Amount:</h3>
+                <br>
+                <h4>{{choice.amt}}</h4>
+            </div> 
+            
+            <br>
+            <br>
+            {% if choice.amt > 5000 %}
+                <p class="para">You get a 5STAR for your sales today!!</p>
+            {% else %}
+                <p class="para">You can do much better! Don't give up!</p>
+            {% endif %}
+            <p id="p5">{{choice.created}}</p>
+            
+            <a class="btn btn-md btn-primary edel" href="/delete/{{choice.id}}/{{userdata.userid}}">Delete</a>
+            <a class="btn btn-md btn-primary edel" href ='/edit/{{choice.id}}/{{userdata.userid}}'>Edit</a>
+
+        </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{% block body %}
+        <div class="container">
+            <h3> Edit data</h3>
+            <br>
+            <form action=" " method="POST">
+                {% csrf_token %}
+                <h6>Amount</h6>
+                <input name='amt' value='{{data.amt}}' >
+                <br><br>
+                <h6>Item</h6>
+                <input type="text" name='item' value='{{data.item}}'>
+                <br><br>
+                <h6>Quantity</h6>
+                <input type="text" name='quantity' value='{{data.quantity}}'>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-md btn-primary">save changes</button>
+                </input>
+                <br>
+                <br>
+            </form>
+        </div>
+{% endblock %}
